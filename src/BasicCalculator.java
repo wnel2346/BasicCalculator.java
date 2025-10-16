@@ -15,4 +15,21 @@ public class BasicCalculator {
 
         long num2 = scanner.nextLong();
 
+        long result = 0;
+
+        if (operator == '+') {
+            result = num1 + num2;
+        } else if (operator == '-') {
+            result = num1 - num2;
+        } else if (operator == '*') {
+            result = num1 * num2;
+        } else if (operator == '/') {
+            if (num2 != 0) {
+                result = num1 / num2;
+            } else {
+                System.out.println("오류: 0으로 나눌 수 없습니다.");
+                scanner.close();
+                return;
+            }
+
 
